@@ -1,3 +1,6 @@
 [submodule ".devcontainer"]
 	path = .devcontainer
 	url = https://github.com/UOM-EEE-EEEN11202/devcontainer
+[submodule ".vscode"]
+	path = .vscode
+	url = https://github.com/UOM-EEE-EEEN11202/vscode
