@@ -10,3 +10,6 @@
 [submodule "lab_t/.vscode"]
 	path = lab_t/.vscode
 	url = https://github.com/UOM-EEE-EEEN11202/vscode
+[submodule ".vscode"]
+	path = .vscode
+	url = https://github.com/UOM-EEE-EEEN11202/vscode
