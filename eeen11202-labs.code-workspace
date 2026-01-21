@@ -2,83 +2,83 @@
   "folders": [
     {
       "name": "Lab A",
-      "path": "lab_a"
+      "path": "lab-a"
     },
     {
       "name": "Lab B",
-      "path": "lab_b"
+      "path": "lab-b"
     },
     {
       "name": "Lab C",
-      "path": "lab_c"
+      "path": "lab-c"
     },
     {
       "name": "Lab D",
-      "path": "lab_d"
+      "path": "lab-d"
     },
     {
       "name": "Lab E",
-      "path": "lab_e"
+      "path": "lab-e"
     },
     {
       "name": "Lab F",
-      "path": "lab_f"
+      "path": "lab-f"
     },
     {
       "name": "Lab G",
-      "path": "lab_g"
+      "path": "lab-g"
     },
     {
       "name": "Lab H",
-      "path": "lab_h"
+      "path": "lab-h"
     },
     {
       "name": "Lab I",
-      "path": "lab_i"
+      "path": "lab-i"
     },
     {
       "name": "Lab J",
-      "path": "lab_j"
+      "path": "lab-j"
     },
     {
       "name": "Lab K",
-      "path": "lab_k"
+      "path": "lab-k"
     },
     {
       "name": "Lab L",
-      "path": "lab_l"
+      "path": "lab-l"
     },
     {
       "name": "Lab M",
-      "path": "lab_m"
+      "path": "lab-m"
     },
     {
       "name": "Lab N",
-      "path": "lab_n"
+      "path": "lab-n"
     },
     {
       "name": "Lab O",
-      "path": "lab_o"
+      "path": "lab-o"
     },
     {
       "name": "Lab P",
-      "path": "lab_p"
+      "path": "lab-p"
     },
     {
       "name": "Lab Q",
-      "path": "lab_q"
+      "path": "lab-q"
     },
     {
       "name": "Lab R",
-      "path": "lab_r"
+      "path": "lab-r"
     },
     {
       "name": "Lab S",
-      "path": "lab_s"
+      "path": "lab-s"
     },
     {
       "name": "Lab T",
-      "path": "lab_t"
+      "path": "lab-t"
     }
   ]
 }
