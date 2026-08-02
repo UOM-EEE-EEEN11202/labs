@@ -5,8 +5,8 @@
 // ----------------------------------------------------------------------------
 
 int main(void) {
-  double h, l;
-  double w = 0.0;
+    double h, l;
+    double w = 0.0;
 
-  return 0;
+    return 0;
 }

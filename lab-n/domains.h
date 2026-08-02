@@ -1,6 +1,6 @@
 struct domain_extensions {
-  char domain[10];
-  char country[50];
+    char domain[10];
+    char country[50];
 };
 
 const struct domain_extensions country_codes[] = {
