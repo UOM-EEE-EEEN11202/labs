@@ -1,0 +1,54 @@
+{
+    // Needs "lldb-dap.executable-path": "/usr/bin/lldb-dap-21" set in the devcontainer to work
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb-dap",
+            "request": "launch",
+            "name": "C: clang compile and debug current file",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "env": [],
+            "cwd": "${fileDirname}",
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "preLaunchTask": "C: clang compile current file"
+        },
+        {
+            "type": "lldb-dap",
+            "request": "launch",
+            "name": "C++: clang++ compile and debug current file",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "env": [],
+            "cwd": "${fileDirname}",
+            "stopOnEntry": false,
+            "console": "integratedTerminal",
+            "preLaunchTask": "C++: clang++ compile current file"
+        },
+        {
+            "name": "Python: current file",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "python": "${command:python.interpreterPath}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: pytest current file",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "python": "${command:python.interpreterPath}",
+            "args": [
+                "${file}",
+                "-q"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false
+        }
+    ]
+}

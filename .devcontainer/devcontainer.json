@@ -1,0 +1,99 @@
+{
+    "name": "EEEN11202 devcontainer",
+    "image": "ghcr.io/uom-eee-eeen11202/dockerfile:2627.0",
+    "runArgs": ["--platform=linux/arm64"],
+    "capAdd": ["SYS_PTRACE"],
+    "securityOpt": ["seccomp=unconfined"],
+    "postAttachCommand": "bash .devcontainer/post_attach.sh",
+    "remoteUser": "vscode",
+    "containerEnv": {
+        "localWorkspaceFolder": "${containerWorkspaceFolder}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.vscode-pull-request-github",
+                "github.codespaces",
+                "github.copilot",
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "ms-toolsai.datawrangler",
+                "charliermarsh.ruff",
+                "astral-sh.ty",
+                "uom-eee-eeen11202.c-cpp-codelens",
+                "ms-vscode.cmake-tools",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "llvm-vs-code-extensions.lldb-dap",
+                "rust-lang.rust-analyzer",
+                "ms-vscode.hexeditor",
+                "streetsidesoftware.code-spell-checker",
+                "mechatroner.rainbow-csv"
+            ],
+            "settings": {
+                "chat.disableAIFeatures": false,
+                "workbench.colorTheme": "Light 2026",
+                "git.openRepositoryInParentFolders": "prompt",
+                "terminal.integrated.suggest.enabled": true,
+                "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    }
+                },
+                "editor.insertSpaces": true,
+                "[python]": {
+                    "editor.tabSize": 4,
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports.ruff": "explicit"
+                    }
+                },
+                "python.testing.pytestEnabled": true,
+                "python.useEnvironmentsExtension": true,
+                "python-envs.alwaysUseUv": true,
+                "python-envs.terminal.autoActivationType": "shellStartup",
+                "python-envs.defaultEnvManager": "ms-python.python:venv",
+                "python.languageServer": "Pylance",
+                "ty.disableLanguageServices": true,
+                "notebook.formatOnSave.enabled": true,
+                "notebook.defaultFormatter": "charliermarsh.ruff",
+                "notebook.codeActionsOnSave": {
+                    "notebook.source.organizeImports": "explicit"
+                },
+                "[rust]": {
+                    "editor.tabSize": 4,
+                    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+                    "editor.formatOnSave": true
+                },
+                "[c]": {
+                    "editor.tabSize": 4,
+                    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+                    "editor.formatOnSave": true
+                },                
+                "[h]": {
+                    "editor.tabSize": 4,
+                    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+                    "editor.formatOnSave": true
+                },
+                "[cpp]": {
+                    "editor.tabSize": 4,
+                    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+                    "editor.formatOnSave": true
+                },
+                "llvm-vs-code-extensions.vscode-clangd.arguments": [
+                    "--fallback-style={BasedOnStyle: Google}"
+                ],
+                "lldb-dap.executable-path": "/usr/bin/lldb-dap-21"
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C: clang compile current file",
+            "type": "shell",
+            "detail": "Compile the active C file with clang and debug-friendly warnings",
+            "command": "clang",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-std=c23",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${fileDirname}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ],
+            "presentation": {
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "close": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "C: clang compile and run current file",
+            "detail": "Compile then run the active C file",
+            "dependsOn": [
+                "C: clang compile current file",
+                "Run current file"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "C++: clang++ compile current file",
+            "type": "shell",
+            "detail": "Compile the active C++ file with clang++ and debug-friendly warnings",
+            "command": "clang++",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-std=c++23",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${fileDirname}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ],
+            "presentation": {
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "close": true
+            },
+            "group": {
+                "kind": "build",
+            }
+        },
+        {
+            "label": "C++: clang++ compile and run current file",
+            "detail": "Compile then run the active C++ file",
+            "dependsOn": [
+                "C++: clang++ compile current file",
+                "Run current file"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Run current file",
+            "type": "shell",
+            "detail": "Run the binary built from the active source file.",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "shared",
+                "reveal": "always",
+                "focus": true,
+                "clear": true
+            },
+            "runOptions": {
+                "instanceLimit": 1
+            }
+        }
+    ]
+}
